@@ -6,13 +6,14 @@ let users = mongoose.Schema({
     type: String,
     require: true
   },
-  name:{
+  userName:{
     type: String,
     require: true
   },
-  age:{
-    type: Number,
-    require: true
+  email:{
+    type: String,
+    require: true,
+    unique: true
   },
   createdOn:{
     type: Date,
@@ -20,4 +21,4 @@ let users = mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model("User",users);
+module.exports = mongoose.model("users",users);
